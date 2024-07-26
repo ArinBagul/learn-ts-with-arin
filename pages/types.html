@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Basic Types in TypeScript - TS Crash Course</title>
+</head>
+
+<body>
+    <a href="../index.html">Go to Home</a>
+    <h1>Basic Types in TypeScript</h1>
+    <h2>TS crash course by Arin Bagul</h2>
+    <p>
+        Type represents which type of data a variable can hold. In some languages it is also known as Data Type. In
+        TypeScript, type is classified in two:
+    <ol>
+        <li>Primitive Type: number, string, boolean, character, undefined</li>
+
+        <span class="code_block">
+            <span>let a = 5;</span>
+            <span>let b = a;</span>
+            <span>b = b + 2;</span>
+            <span><br></span>
+            <span>console.log(a);</span>
+            <span>console.log(b);</span>
+
+            <br>// b will become 7 but a is still 5.
+        </span>
+
+        <li>Reference Type: array, class, object</li>
+
+        <span class="code_block">
+            <span>let a = [1,2,3,4];</span>
+            <span>let b = a;</span>
+            <span>b.pop();</span>
+            <span><br></span>
+            <span>console.log(a);</span>
+            <span>console.log(b);</span>
+
+            <br>/* <br>
+            here at first a = [1,2,3,4]<br>
+            we are popping out from b<br>
+            now b = [1,2,3]<br>
+            but also a = [1,2,3]<br>
+            */<br>
+        </span>
+    </ol>
+    <b>Basic types in TS are: </b>
+    <ul>
+        <li>number, string, character, boolean, undefined</li>
+        <li>Array, Tuple</li>
+        <li>any, never, void, unknown</li>
+        <li>Class, Object, Enum</li>
+    </ul>
+    
+    </p>
+    <p>We will dive into the topic of basic types in next chapter: <a href="./types.html">Basic Types</a></p>
+</body>
+
+</html>
