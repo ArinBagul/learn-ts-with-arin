@@ -9,7 +9,8 @@
   flex-direction: column;
   gap: 15px;
 }
-.code_block{
+.code_block {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 300px;
@@ -18,4 +19,34 @@
   background-color: #172c45;
   color: white;
   border-radius: 7px;
+  overflow: hidden; /* Ensure the pseudo-element stays within the boundaries */
+}
+
+.code_block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('assets/code_bg/grid_bg.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; 
+  /* mix-blend-mode: screen; */
+  z-index: 0; 
+}
+
+.code_block > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (min-width: 800px) {
+  body{
+    padding: 2rem;
+  }
+  .main_heading,.main_subheading{
+    text-align: center;
+  }
 }
